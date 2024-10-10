@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 430px;
+  min-height: 923px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  background: linear-gradient(180deg, rgba(99, 87, 170, 90%) 0%, rgba(39, 32, 82, 90%) 100%);;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu {
+  padding-top: 1.7em;
+}
+.search {
+  padding-top: 1.4em;
+}
+
+.movie-page {
+  text-decoration: none;
+  color: white;
+}
+
+.movie-page:hover {
+  color: #EBB99E;
+}
+
+.movies-title {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}

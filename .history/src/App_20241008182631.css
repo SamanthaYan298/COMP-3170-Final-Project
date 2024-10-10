@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 430px;
+  min-height: 923px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  background-color:  background: linear-gradient(180deg, rgba(99, 87, 170, 90%) 0%, rgba(39, 32, 82, 90%) 100%);;
+}
