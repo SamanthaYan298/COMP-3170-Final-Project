@@ -152,7 +152,7 @@
   position: absolute;
   z-index: 2;
   color: white;
-  top: 14.1em;
+  top: 15em;
   left: 1.2em;
   font-size: 2em;
   font-family: "Kaisei Opti", serif;
@@ -166,7 +166,7 @@
   position: absolute;
   z-index: 2;
   color: white;
-  top: 15.1em;
+  top: 15.7em;
   left: 1.2em;
   font-size: 2em;
   font-family: "Kaisei Opti", serif;
@@ -201,7 +201,7 @@
 .category {
   position: absolute;
   z-index: 5;
-  top: 61em;
+  top: 62em;
   left: 4.5em;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -213,7 +213,7 @@
   position: absolute;
   width: 80%;
   height: 1px;
-  top: 44.5em;
+  top: 45em;
   left: 3em;
   background-color: #EBB99E;
   margin: 20px 0;
