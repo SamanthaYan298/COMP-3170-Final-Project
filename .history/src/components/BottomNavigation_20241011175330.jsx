@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BottomNavigation = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 w-full"> 
+    <div className="fixed bottom-0 left-0 right-0 z-50">
       <div
         className="flex justify-around items-center h-16"
         style={{
