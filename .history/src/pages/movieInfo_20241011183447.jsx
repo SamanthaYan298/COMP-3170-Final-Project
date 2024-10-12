@@ -32,7 +32,7 @@ export default function MovieInfo() {
                             <path d="M25.6049 18.1501C24.8963 17.7302 24 18.241 24 19.0646V43.6806C24 44.5043 24.8963 45.0151 25.6049 44.5952L46.3748 32.2872C47.0694 31.8754 47.0694 30.8698 46.3748 30.4581L25.6049 18.1501Z" fill="#D43128"/>
                             </g>
                             <defs>
-                            <filter id="filter0_d_78_323" x="0" y="0" width="72" height="71" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <filter id="filter0_d_78_323" x="0" y="0" width="72" height="71" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                             <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                             <feOffset dx="5" dy="4"/>
@@ -49,9 +49,9 @@ export default function MovieInfo() {
                         <p>IMDb Rating</p>
                         <p className="rating">⭐ 8.3/10</p>
                     </div>
-                    <div className="line"></div>
+                    <div class="line"></div>
                     <p className="description">On a journey to find the cure for a Tatarigami's curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.</p>
-                    <div className="line-2"></div>
+                    <div class="line-2"></div>
                 </div>
                 <h3 className="characters-section">Characters</h3>
                 <div className="characters">
