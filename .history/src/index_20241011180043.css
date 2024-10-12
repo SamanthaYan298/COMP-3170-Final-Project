@@ -67,3 +67,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em; /* Adjusts heading size for smaller screens */
+  }
+
+  button {
+    padding: 0.4em 1em; /* Smaller padding for buttons */
+  }
+
+  /* Adjust other styles as necessary */
+}

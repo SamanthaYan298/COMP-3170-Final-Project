@@ -12,6 +12,12 @@
   background: linear-gradient(180deg, rgba(99, 87, 170, 90%) 0%, rgba(39, 32, 82, 90%) 100%);
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the full height of the viewport */
+}
+
 /* Movie Page */
 
 .top-nav {

@@ -20,6 +20,7 @@ function App() {
           {/* Movie Info Page */}
           <Route path="/movieInfo" element={<MovieInfo />} />
 
+          {/* Add other routes as needed for Account and Favourite pages */}
         </Routes>
 
         {/* Optional: for quick navigation */}
@@ -28,6 +29,7 @@ function App() {
           <Link to="/movieInfo" className='movie-page'>👉🏻 Movie Info Page</Link>
         </div>
 
+        {/* Bottom Navigation */}
         <BottomNavigation />
       </div>
     </Router>

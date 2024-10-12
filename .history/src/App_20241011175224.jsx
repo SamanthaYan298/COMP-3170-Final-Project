@@ -8,7 +8,7 @@ import BottomNavigation from './components/BottomNavigation';
 function App() {
   return (
     <Router>
-      <div className='app-container'>
+      <div className='flex flex-col min-h-screen'> {/* Updated flex container */}
         {/* Define Routes */}
         <Routes>
           {/* Home Page Route */}
@@ -20,6 +20,7 @@ function App() {
           {/* Movie Info Page */}
           <Route path="/movieInfo" element={<MovieInfo />} />
 
+          {/* Add other routes as needed for Account and Favourite pages */}
         </Routes>
 
         {/* Optional: for quick navigation */}
@@ -28,6 +29,7 @@ function App() {
           <Link to="/movieInfo" className='movie-page'>👉🏻 Movie Info Page</Link>
         </div>
 
+        {/* Bottom Navigation */}
         <BottomNavigation />
       </div>
     </Router>
@@ -35,3 +37,7 @@ function App() {
 }
 
 export default App;
+
+
+        
+       
