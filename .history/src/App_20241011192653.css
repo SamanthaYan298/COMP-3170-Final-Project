@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 #root {
+  display: flex;
   width: 430px;
   min-height: 1100px;
   margin: 0 auto;
@@ -304,7 +305,7 @@
   max-width: 100vw;
   text-align: center;
   align-items: center;
-  transform: translateX(-2.1%);
+  margin: 0 auto;
 }
 
 .nav-container {

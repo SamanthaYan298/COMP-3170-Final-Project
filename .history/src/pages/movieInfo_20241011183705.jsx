@@ -51,7 +51,7 @@ export default function MovieInfo() {
                     </div>
                     <div className="line"></div>
                     <p className="description">On a journey to find the cure for a Tatarigami's curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.</p>
-                    <div className="line-2"></div>
+                    <div class="line-2"></div>
                 </div>
                 <h3 className="characters-section">Characters</h3>
                 <div className="characters">
