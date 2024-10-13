@@ -105,7 +105,7 @@ const MoviesList = () => {
             />
             <Stack mt='6' spacing='3'>
               <Heading size='md'className='movie-title'>
-                <a href="/movieInfo" className='title-sm'>{movie.title}</a>
+                <a href="#" className='title-sm'>{movie.title}</a>
               </Heading>
               <Text className='movie-title font'>
                 {movie.info}
