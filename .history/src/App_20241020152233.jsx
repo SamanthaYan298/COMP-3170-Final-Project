@@ -27,10 +27,10 @@ function App() {
         </Routes>
 
         {/* Optional: for quick navigation */}
-      {/*  <div className='link-layout'>
+        <div className='link-layout'>
           <Link to="/movies" className='movie-page'>👉🏻 Movie Page</Link>
           <Link to="/movieInfo" className='movie-page'>👉🏻 Movie Info Page</Link>
-  </div>*/}
+        </div>
 
         <BottomNavigation />
       </div>
