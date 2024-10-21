@@ -1,4 +1,4 @@
-import MovieList from "../components/MovieList";
+import MovieListWithRemoveButton from "../components/MovieListWithRemoveButton";
 import { Link } from "react-router-dom";
 import '../App.css';
 import { HStack, PinInput, PinInputField } from '@chakra-ui/react'
@@ -23,7 +23,7 @@ export default function Favourites() {
               <path d="M2 14C2 20.6274 7.37258 26 14 26C17.3194 26 20.3242 24.6522 22.4966 22.474C24.6616 20.3034 26 17.308 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-            <MovieList />
+            <MovieListWithRemoveButton />
             </div>
         </main>
       </>
