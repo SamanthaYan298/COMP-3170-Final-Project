@@ -45,7 +45,7 @@ const Profile = () => {
       <Divider my={6} />
      {/* visited Carousel */}
      <Box>
-        <Heading as="h2" size="xl" textAlign="center" mt={0} mb={15}>
+        <Heading as="h2" size="xl" textAlign="center" mt={4} mb={8}>
         Visiting History
         </Heading>
         <MovieCarousel movies={visitedMovies} /> 
@@ -53,7 +53,7 @@ const Profile = () => {
         
       <Divider my={6} />
 
-      <Heading as="h2" size="lg" textAlign="center" marginTop="3rem" marginBottom="0" mb={4}>
+      <Heading as="h2" size="lg" textAlign="center" marginTop="2rem" marginBottom="0" mb={4}>
         Help & Support
       </Heading>
       <Text textAlign="center" mb={4} fontSize="17.5px" fontWeight="600">
