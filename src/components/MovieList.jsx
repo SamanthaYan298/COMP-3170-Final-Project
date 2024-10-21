@@ -110,10 +110,6 @@ const MoviesList = () => {
               <Text className='movie-title font'>
                 {movie.info}
               </Text>
-              {/* Add Remove button with bookmark icon */}
-              <Button className="remove-btn" leftIcon={<FaBookmark />} colorScheme="purple" variant="solid">
-                Remove
-              </Button>
             </Stack>
           </CardBody>
         </Card>

@@ -89,207 +89,42 @@
   pointer-events: none;
 }
 
-/* Movie Info Page */
+/* Favourites Page */
 
-.link-layout {
-  display: flex;
-  flex-direction: column;
+.cardsWRB {
+  border-radius: 1em;
+  transition: transform 0.2s ease;
 }
 
-.back-btn {
-  position: absolute;
-  top: 4em;
-  left: 2em;
-  display: flex;
-  align-items: flex-start;
-  justify-content: left;
-  padding-left: 2em;
-  padding-top: 1em;
-  z-index: 1;
+.cardsWRB:hover {
+  transform: translateY(-5px);
 }
 
-.movie-info-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  align-items: center;
-  text-align: center;
-  transform: scale(1.27);
+.movie-title-WRB {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-top: -1px;
+  margin-bottom: 2px;
 }
 
-.image-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  clip-path: inset(5%);
+.title-sm-WRB {
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: -5px;
 }
 
-.movie-poster {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  background-size: cover;
+.title-sm-WRB:hover {
+  color: #805ad5; /* Match button color */
 }
 
-.gradient-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
-  background: linear-gradient(to top, rgb(77, 69, 123, 1) 25%, transparent 100%);
-  top: 31em;
-  pointer-events: none;
-  z-index: 1;
+.font-WRB {
+  color: #ffffff;
+  font-size: 0.9em;
 }
 
-.movie-title-1 {
-  position: absolute;
-  z-index: 2;
-  color: white;
-  top: 14.1em;
-  left: 1.2em;
-  font-size: 2em;
-  font-family: "Kaisei Opti", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: white;
-  font-size: 2.5rem;
-}
-
-.movie-title-2 {
-  position: absolute;
-  z-index: 2;
-  color: white;
-  top: 15.1em;
-  left: 1.2em;
-  font-size: 2em;
-  font-family: "Kaisei Opti", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: white;
-  font-size: 2.5rem;
-}
-
-.rating-container {
-  position: absolute;
-  z-index: 5;
-  color: white;
-  top: 40em;
-  left: 18.5em;
-}
-
-.rating {
-  position: absolute;
-  z-index: 5;
-  color: white;
-  top: 1em;
-}
-
-.play-btn {
-  position: absolute;
-  z-index: 5;
-  top: 35em;
-  left: 19em;
-}
-
-.category {
-  position: absolute;
-  z-index: 5;
-  top: 61em;
-  left: 4.5em;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 0.7em;
-  font-style: normal;
-}
-
-.line {
-  position: absolute;
-  width: 80%;
-  height: 1px;
-  top: 44.5em;
-  left: 3em;
-  background-color: #EBB99E;
-  margin: 20px 0;
-}
-
-.description {
-  position: absolute;
-  text-align: left;
-  top: 51.5em;
-  left: 3em;
-  right: 3em;
-  font-family: "Kaisei Opti", serif;
-  font-style: normal;
-  color: white;
-  font-size: 0.9rem;
-}
-
-.line-2 {
-  position: absolute;
-  width: 80%;
-  height: 1px;
-  top: 51.5em;
-  left: 3em;
-  background-color: #EBB99E;
-  margin: 20px 0;
-}
-
-.characters {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  justify-content: center;
-}
-
-.character-1 {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid white;
-  z-index: 5;
-  top: 56em;
-  left: -10em;
-}
-
-.character-2 {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid white;
-  z-index: 5;
-  top: 56em;
-  left: -5em;
-}
-
-.character-3 {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid white;
-  z-index: 5;
-  top: 56em;
-  left: 0;
-}
-
-.characters-section {
-  position: absolute;
-  top: 45em;
-  left: 2.5em;
+.remove-btn:hover {
+  background-color: #553c9a;
 }
 
 
@@ -318,7 +153,7 @@
 }
 
 .remove-btn {
-  background-color: #320155; 
+  background-color: #320155;
   color: white;
   font-size: 16px;
   display: flex;
@@ -328,8 +163,9 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-}
-
-.remove-btn:hover {
-  background-color: #5c1799; 
+  width: 100%; /* Ensure the button takes the full width of its container */
+  justify-content: center; /* Center the text and icon inside the button */
+  box-sizing: border-box; /* Include padding in the button's width calculation */
+  margin-bottom: 25px;
+  margin-top: 5px;
 }
