@@ -5,7 +5,6 @@ import MovieInfo from './pages/movieInfo';
 import HomePage from './pages/homepage';
 import BottomNavigation from './components/BottomNavigation';
 import Favourites from './pages/favourites';
-import Profile from './pages/profile';
 
 function App() {
   return (
