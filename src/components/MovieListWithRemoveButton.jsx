@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState } from 'react'
 import "../App.css";
-import { Box, Heading, Image, Text, SimpleGrid, Card, CardBody, Stack, Button } from "@chakra-ui/react";
-import { FaBookmark } from 'react-icons/fa'; // Import the bookmark icon
+import { Box, Heading, Image, Text, SimpleGrid, Card, CardBody, Stack } from "@chakra-ui/react";
 
-const movies = [
+
+const movieswithremovebutton = [
   {
     id: 1,
     title: 'Castle in the Sky',
@@ -91,7 +91,7 @@ const movies = [
   },
 ];
 
-const MoviesList = () => {
+const MoviesListWithRemoveButton = () => {
   return (
     <SimpleGrid templateColumns='repeat(auto-fill, minmax(200px, 1fr))' spacing={4}>
       {movies.map((movie) => (
@@ -104,7 +104,7 @@ const MoviesList = () => {
               height="260px"
             />
             <Stack mt='6' spacing='3'>
-              <Heading size='md' className='movie-title'>
+              <Heading size='md'className='movie-title'>
                 <a href="#" className='title-sm'>{movie.title}</a>
               </Heading>
               <Text className='movie-title font'>
@@ -119,7 +119,8 @@ const MoviesList = () => {
         </Card>
       ))}
     </SimpleGrid>
-  );
+    )
+
 }
 
 export default MoviesList;

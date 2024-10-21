@@ -17,7 +17,7 @@ const BottomNavigation = () => {
         </Link>
 
         {/* Favourites Button */}
-        <Link to="/favorites" className="flex flex-col items-center text-white">
+        <Link to="/favourites" className="flex flex-col items-center text-white">
           <img src="/images/FavouriteIcon.svg" alt="Favourites" className="h-8 w-8" />
           <span className="text-sm"></span>
         </Link>

@@ -316,3 +316,20 @@
   gap: 10px;
   padding: 10px 32px;
 }
+
+.remove-btn {
+  background-color: #320155; 
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #5c1799; 
+}

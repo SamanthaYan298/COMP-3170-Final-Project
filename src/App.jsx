@@ -4,6 +4,7 @@ import Movies from './pages/movies';
 import MovieInfo from './pages/movieInfo';
 import HomePage from './pages/homepage';
 import BottomNavigation from './components/BottomNavigation';
+import Favourites from './pages/favourites';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
 
           {/* Movie Info Page */}
           <Route path="/movieInfo" element={<MovieInfo />} />
+
+          {/* Favourites Page */}
+          <Route path="/favourites" element={<Favourites />} />
 
         </Routes>
 
