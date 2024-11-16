@@ -1,0 +1,624 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 100%; 
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  background: linear-gradient(180deg, rgba(99, 87, 170, 90%) 0%, rgba(39, 32, 82, 90%) 100%);
+}
+
+/* Movie Page */
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu {
+  padding-top: 1.7em;
+}
+.search {
+  padding-top: 1.4em;
+}
+
+.movie-page {
+  text-decoration: none;
+  color: white;
+}
+
+.movie-page:hover {
+  color: #EBB99E;
+}
+
+.title-sm {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.title-sm:hover {
+  color: #EBB99E;
+}
+
+.movie-title {
+  margin: 0;
+  padding: 0;
+}
+
+.font {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.94em;
+  font-style: normal;
+}
+
+.cards {
+  padding-bottom: 2em;
+}
+
+.pin-input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1.5em;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+  color: white;
+  border-color: white;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%
+}
+
+.pins {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+/* Movie Info Page */
+
+.link-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-btn {
+  position: absolute;
+  top: 4em;
+  left: 2em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  padding-left: 2em;
+  padding-top: 1em;
+  z-index: 1;
+}
+
+.movie-info-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  transform: scale(1.27);
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(5%);
+}
+
+.movie-poster {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(to top, rgb(77, 69, 123, 1) 25%, transparent 100%);
+  top: 31em;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.movie-title-1 {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  top: 14.1em;
+  left: 1.2em;
+  font-size: 2em;
+  font-family: "Kaisei Opti", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.movie-title-2 {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  top: 15.1em;
+  left: 1.2em;
+  font-size: 2em;
+  font-family: "Kaisei Opti", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.rating-container {
+  position: absolute;
+  z-index: 5;
+  color: white;
+  top: 40em;
+  left: 18.5em;
+}
+
+.rating {
+  position: absolute;
+  z-index: 5;
+  color: white;
+  top: 1em;
+}
+
+.play-btn {
+  position: absolute;
+  z-index: 5;
+  top: 35em;
+  left: 19em;
+}
+
+.category {
+  position: absolute;
+  z-index: 5;
+  top: 61em;
+  left: 4.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 0.7em;
+  font-style: normal;
+}
+
+.line {
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  top: 44.5em;
+  left: 3em;
+  background-color: #EBB99E;
+  margin: 20px 0;
+}
+
+.description {
+  position: absolute;
+  text-align: left;
+  top: 51.5em;
+  left: 3em;
+  right: 3em;
+  font-family: "Kaisei Opti", serif;
+  font-style: normal;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.line-2 {
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  top: 51.5em;
+  left: 3em;
+  background-color: #EBB99E;
+  margin: 20px 0;
+}
+
+.characters {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: center;
+}
+
+.character-1 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 5;
+  top: 56em;
+  left: -10em;
+}
+
+.character-2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 5;
+  top: 56em;
+  left: -5em;
+}
+
+.character-3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 5;
+  top: 56em;
+  left: 0;
+}
+
+.characters-section {
+  position: absolute;
+  top: 45em;
+  left: 2.5em;
+}
+
+
+/* Favourites Page */
+
+.cardsWRB {
+  border-radius: 1em;
+  transition: transform 0.2s ease;
+}
+
+.cardsWRB:hover {
+  transform: translateY(-5px);
+}
+
+.movie-title-WRB {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-top: -1px;
+  margin-bottom: 2px;
+}
+
+.title-sm-WRB {
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: -5px;
+}
+
+.title-sm-WRB:hover {
+  color: #805ad5; 
+}
+
+.font-WRB {
+  color: #ffffff;
+  font-size: 0.9em;
+}
+
+.remove-btn:hover {
+  background-color: #553c9a;
+}
+
+
+/* BottomNav - Component */
+.bottom-nav {
+  position: fixed;
+  max-width: 450px;
+  width: 100%;
+  bottom: 0;
+  z-index: 90;
+  overflow: hidden;
+  max-width: 100vw;
+  text-align: center;
+  align-items: center;
+  transform: translateX(-2.1%);
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  max-width: 430px;
+  height: 40px;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px 32px;
+}
+
+.remove-btn {
+  background-color: #320155;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  justify-content: center; 
+  box-sizing: border-box; 
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+
+
+
+
+/* Media Queries */
+
+/* Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  #root {
+    width: 100%; 
+    min-height: 100vh;
+    padding: 3rem;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    background: linear-gradient(180deg, rgba(99, 87, 170, 90%) 0%, rgba(39, 32, 82, 90%) 100%);
+}
+
+  .movie-title-1,
+  .movie-title-2 {
+    font-size: 3rem; 
+  }
+
+  .rating-container {
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+
+  .characters-section {
+    top: 70%; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .character-1,
+  .character-2,
+  .character-3 {
+    width: 70px; 
+    height: 70px;
+  }
+
+  .description {
+    font-size: 1.2rem; 
+    padding: 0 3rem;
+  }
+
+  .link-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .back-btn {
+    position: absolute;
+    top: 4em;
+    left: 2em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    padding-left: 2em;
+    padding-top: 1em;
+    z-index: 1;
+  }
+  
+  .movie-info-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    transform: scale(1);
+  }
+  
+  .image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(5%);
+  }
+  
+  .movie-poster {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to top, rgb(77, 69, 123, 1) 25%, transparent 100%);
+    top: 31em;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .movie-title-1 {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    top: 9em;
+    left: 2em;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 3rem;
+  }
+  
+  .movie-title-2 {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    top: 10em;
+    left: 2em;
+    font-size: 2em;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 3rem;
+  }
+  
+  .rating-container {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    top: 40em;
+    left: 18.5em;
+  }
+  
+  .rating {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    top: 1em;
+  }
+  
+  .play-btn {
+    position: absolute;
+    z-index: 5;
+    top: 35em;
+    left: 70em;
+  }
+  
+  .category {
+    position: absolute;
+    z-index: 5;
+    top: 61em;
+    left: 4.5em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 0.7em;
+    font-style: normal;
+  }
+  
+  .line {
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    top: 44.5em;
+    left: 3em;
+    background-color: #EBB99E;
+    margin: 20px 0;
+  }
+  
+  .description {
+    position: absolute;
+    text-align: left;
+    top: 40em;
+    left: 3em;
+    right: 3em;
+    font-family: "Kaisei Opti", serif;
+    font-style: normal;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .line-2 {
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    top: 51.5em;
+    left: 3em;
+    background-color: #EBB99E;
+    margin: 20px 0;
+  }
+  
+  .characters {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: center;
+  }
+  
+  .character-1 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 5;
+    top: 56em;
+    left: -10em;
+  }
+  
+  .character-2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 5;
+    top: 56em;
+    left: -5em;
+  }
+  
+  .character-3 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 5;
+    top: 56em;
+    left: 0;
+  }
+  
+  .characters-section {
+    position: absolute;
+    top: 45em;
+    left: 2.5em;
+  }
+}
