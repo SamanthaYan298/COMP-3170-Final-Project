@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root */
+#root {
+  @apply w-[430px] min-h-[1100px] mx-auto p-8 flex flex-col items-center text-center text-white bg-gradient-to-b from-[rgba(99,87,170,0.9)] to-[rgba(39,32,82,0.9)];
+}
+
+/* Movie Page */
+.top-nav {
+  @apply flex justify-between;
+}
+
+.menu {
+  @apply pt-7;
+}
+
+.search {
+  @apply pt-6;
+}
+
+.movie-page {
+  @apply no-underline text-white hover:text-[#EBB99E];
+}
+
+.title-sm {
+  @apply font-kaisei font-bold text-white text-lg hover:text-[#EBB99E];
+}
+
+.movie-title {
+  @apply m-0 p-0;
+}
+
+.font {
+  @apply font-roboto font-light text-sm;
+}
+
+.cards {
+  @apply pb-8;
+}
+
+.pin-input-container {
+  @apply flex justify-between items-center text-center bg-transparent text-white border border-white rounded-full w-4 h-4;
+}
+
+.pins {
+  @apply flex items-center justify-center text-center pointer-events-none;
+}
+
+/* Movie Info Page */
+.link-layout {
+  @apply flex flex-col;
+}
+
+.back-btn {
+  @apply absolute top-16 left-8 flex items-start justify-start pl-8 pt-4 z-10;
+}
+
+.movie-info-container {
+  @apply relative flex flex-col h-screen w-full items-center text-center transform scale-125;
+}
+
+.image-container {
+  @apply relative flex flex-col w-full h-full clip-path-inset-5;
+}
+
+.movie-poster {
+  @apply absolute h-full w-full object-cover bg-cover top-0 left-0;
+}
+
+.gradient-overlay {
+  @apply absolute bottom-0 w-full h-[25%] bg-gradient-to-t from-[#4D457B] to-transparent top-[31em] pointer-events-none z-10;
+}
+
+.movie-title-1,
+.movie-title-2 {
+  @apply absolute z-20 text-white font-kaisei font-bold text-2xl;
+}
+
+.movie-title-1 {
+  @apply top-[14.1em] left-[1.2em];
+}
+
+.movie-title-2 {
+  @apply top-[15.1em] left-[1.2em];
+}
+
+.rating-container {
+  @apply absolute z-20 text-white top-[40em] left-[18.5em];
+}
+
+.rating {
+  @apply absolute z-20 text-white top-4;
+}
+
+.play-btn {
+  @apply absolute z-20 top-[35em] left-[19em];
+}
+
+.category {
+  @apply absolute z-20 top-[61em] left-[4.5em] font-roboto font-thin text-xs;
+}
+
+.line {
+  @apply absolute w-[80%] h-px top-[44.5em] left-[3em] bg-[#EBB99E] my-5;
+}
+
+.description {
+  @apply absolute text-left top-[51.5em] left-[3em] right-[3em] font-kaisei text-white text-sm;
+}
+
+.line-2 {
+  @apply absolute w-[80%] h-px top-[51.5em] left-[3em] bg-[#EBB99E] my-5;
+}
+
+.characters {
+  @apply absolute flex justify-center;
+}
+
+.character-1,
+.character-2,
+.character-3 {
+  @apply absolute w-15 h-15 object-cover rounded-full border-2 border-white z-20;
+}
+
+.character-1 {
+  @apply top-[56em] left-[-10em];
+}
+
+.character-2 {
+  @apply top-[56em] left-[-5em];
+}
+
+.character-3 {
+  @apply top-[56em] left-0;
+}
+
+.characters-section {
+  @apply absolute top-[45em] left-[2.5em];
+}
+
+/* Favourites Page */
+.cardsWRB {
+  @apply rounded-lg transition-transform duration-200 ease-in-out hover:translate-y-[-5px];
+}
+
+.movie-title-WRB {
+  @apply text-white font-bold text-xl mt-[-1px] mb-2;
+}
+
+.title-sm-WRB {
+  @apply no-underline text-white mt-[-5px] hover:text-purple-600;
+}
+
+.font-WRB {
+  @apply text-white text-sm;
+}
+
+.remove-btn {
+  @apply bg-purple-900 text-white text-base flex items-center gap-2 px-3 py-2 rounded cursor-pointer transition-colors duration-200 ease-in-out w-full justify-center mb-6 mt-1;
+}
+
+.remove-btn:hover {
+  @apply bg-purple-700;
+}
+
+/* BottomNav - Component */
+.bottom-nav {
+  @apply fixed max-w-[430px] w-full bottom-0 z-50 overflow-hidden text-center flex items-center;
+}
+
+.nav-container {
+  @apply flex w-full max-w-[430px] h-10 justify-around gap-2 px-8;
+}
