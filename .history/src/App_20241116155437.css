@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@media (min-width: 430px) {
 #root {
   width: 100%; 
   min-height: 100vh;
-  height: auto;
+  height: 85em;
   padding: 2rem;
   text-align: center;
   background-size: cover;
@@ -16,7 +16,7 @@
 }
 
 .slick-slide {
-  margin: 0 5px;
+  margin: 0 15px;
 }
 
 .slick-track {
@@ -379,7 +379,7 @@
   margin-top: 5px;
 }
 
-
+}
 
 
 

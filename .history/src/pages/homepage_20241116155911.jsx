@@ -24,7 +24,7 @@ const Homepage = () => {
     <Box>
       {/* Main Carousel */}
       <Box>
-        <Heading as="h1" size="lg" textAlign="center" mt={4} mb={6} padding={35}>
+        <Heading as="h1" size="lg" textAlign="center" mt={4} mb={6} padding={30}>
           AniMotion
         </Heading>
         <MovieCarousel movies={trendingMovies} /> 
