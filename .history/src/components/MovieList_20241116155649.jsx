@@ -93,7 +93,7 @@ const movies = [
 
 const MoviesList = () => {
   return (
-    <SimpleGrid templateColumns='repeat(auto-fill, minmax(181px, 2fr))' spacing={4}>
+    <SimpleGrid templateColumns='repeat(auto-fill, minmax(100px, 1fr))' spacing={4}>
       {movies.map((movie) => (
         <Card key={movie.id} className='cards'>
           <CardBody>

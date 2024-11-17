@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 #root {
   width: 100%; 
   min-height: 100vh;
-  height: auto;
+  height: 85em;
   padding: 2rem;
   text-align: center;
   background-size: cover;
@@ -16,7 +15,7 @@
 }
 
 .slick-slide {
-  margin: 0 5px;
+  margin: 0 15px;
 }
 
 .slick-track {
@@ -345,19 +344,18 @@
 
 /* BottomNav - Component */
 .bottom-nav {
-  position: fixed;  
-  bottom: 0;
-  width: 100%; 
-  padding: 0; 
-  left: 0; 
-  z-index: 100;
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0 16px; 
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-evenly;   gap: 40px;
-  padding: 15px 30px;
-  max-width: 1200px; 
+  justify-content: space-evenly; 
+  gap: 30px; 
+  padding: 12px 50px; 
+  max-width: 1000px; 
   margin: 0 auto; 
 }
 

@@ -93,7 +93,7 @@ const moviesWithRemoveButton = [
 
 const MovieListWithRemoveButton = () => {
   return (
-    <SimpleGrid templateColumns='repeat(auto-fill, minmax(181px, 2fr))' spacing={4}>
+    <SimpleGrid templateColumns='repeat(auto-fill, minmax(180px, 1fr))' spacing={4}>
       {moviesWithRemoveButton.map((movie) => (
         <Card key={movie.id} className='cardsWRB'>
           <CardBody>

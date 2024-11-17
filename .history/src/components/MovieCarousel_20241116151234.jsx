@@ -19,7 +19,7 @@ const MovieCarousel = ({ movies }) => {
   };
 
   return (
-    <Box maxW="900px" mx="auto">
+    <Box>
       <Slider {...trendingSettings}>
         {movies.map((movie) => (
           <Box key={movie.id} p={2} className="movie-container">
@@ -29,7 +29,7 @@ const MovieCarousel = ({ movies }) => {
               alt={movie.title}
               borderRadius="15px"
               boxShadow="lg"
-              w="100%"
+              w="50%"
               h="250px"
               objectFit="cover"
               src={movie.img} 

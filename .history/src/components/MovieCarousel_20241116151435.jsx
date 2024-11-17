@@ -10,7 +10,7 @@ const MovieCarousel = ({ movies }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
@@ -19,7 +19,7 @@ const MovieCarousel = ({ movies }) => {
   };
 
   return (
-    <Box maxW="900px" mx="auto">
+    <Box>
       <Slider {...trendingSettings}>
         {movies.map((movie) => (
           <Box key={movie.id} p={2} className="movie-container">
@@ -30,11 +30,11 @@ const MovieCarousel = ({ movies }) => {
               borderRadius="15px"
               boxShadow="lg"
               w="100%"
-              h="250px"
+              h="200px"
               objectFit="cover"
               src={movie.img} 
             />
-            <Text mt={10} textAlign="center" fontSize="20px" fontWeight="bold">
+            <Text mt={10} textAlign="center" fontSize="16px" fontWeight="bold">
               {movie.title}
             </Text>
           </Box>
