@@ -63,11 +63,11 @@ const Profile = () => {
           </Box>
         </Box>
         <Textarea
-          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection. Add me as a friend!"
+          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection."
           fontSize="13px"
           fontWeight="300"
           resize="none"
-          width="100%"
+          width="90%"
           textAlign="left"
           borderRadius={10}
           bg="white"

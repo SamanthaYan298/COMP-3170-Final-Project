@@ -29,19 +29,19 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <div className='top-nav'>
-        <svg className='menu' width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 2H30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M2 10.1667H30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M2 18.3333H30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <h1>My Profile</h1>
-        <svg className='search' width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23 23L30 30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M2 14C2 20.6274 7.37258 26 14 26C17.3194 26 20.3242 24.6522 22.4966 22.474C24.6616 20.3034 26 17.308 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
-      <Box maxW="600px" mx="auto" p={5}></Box>
+         <div className='top-nav'>
+            <svg className='menu' width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2H30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M2 10.1667H30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M2 18.3333H30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <h1>My Profile</h1>
+            <svg className='search' width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23 23L30 30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M2 14C2 20.6274 7.37258 26 14 26C17.3194 26 20.3242 24.6522 22.4966 22.474C24.6616 20.3034 26 17.308 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+    <Box maxW="600px" mx="auto" p={5}></Box>
       <Box maxW="600px" mx="auto" p={5}>
         <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center">
           <Box
@@ -63,16 +63,16 @@ const Profile = () => {
           </Box>
         </Box>
         <Textarea
-          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection. Add me as a friend!"
-          fontSize="13px"
-          fontWeight="300"
-          resize="none"
-          width="100%"
-          textAlign="left"
-          borderRadius={10}
-          bg="white"
-          p={6}
-        />
+    placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection."
+    fontSize="22px"
+    fontWeight="300"
+    resize="none"
+    width="80%"
+    textAlign="center"
+    bg="gray.100"
+    p={4}
+    borderRadius="md"
+  />
         <Divider my={1} />
 
         <Box display="flex" justifyContent="space-between" alignItems="left" gap={4}>
@@ -84,18 +84,17 @@ const Profile = () => {
             {requests.length ? (
               requests.map((request) => (
                 <Box key={request} mb={4} display="flex" alignItems="center">
-                  <Text fontSize="18px" fontWeight="600" textAlign="left">
-                    {request}
-                  </Text>
-                  <Button
-                    backgroundColor="rgba(221, 184, 255, 0.8)"
-                    onClick={() => handleAddFriend(request)}
-                    ml={25} // Adjust the spacing between the text and button
-                    fontSize="18px"
-                 >
-                    Accept
-                  </Button>
-                </Box>
+  <Text fontSize="18px" fontWeight="600" textAlign="left">
+    {request}
+  </Text>
+  <Button
+    backgroundColor="rgba(221, 184, 255, 0.8)"
+    onClick={() => handleAddFriend(request)}
+    ml={25} // Adjust the spacing between the text and button
+  >
+    Accept
+  </Button>
+</Box>
               ))
             ) : (
               <Text textAlign="left">No friend requests</Text>
@@ -107,13 +106,13 @@ const Profile = () => {
             <Heading as="h2" size="lg" mb={18} >
               My Friends
             </Heading>
-            <Button backgroundColor="rgba(221, 184, 255, 0.8)" fontSize="18px" onClick={toggleFriendsList} mb={4}>
+            <Button backgroundColor="rgba(221, 184, 255, 0.8)" onClick={toggleFriendsList} mb={4}>
               {showFriends ? 'Hide Friends List' : 'View Friends List'}
             </Button>
             {showFriends && (
               <Box>
                 {friends.map((friend) => (
-                  <Text key={friend} mb={2} textAlign="right" fontSize="18px">
+                  <Text key={friend} mb={2} textAlign="right">
                     {friend}
                   </Text>
                 ))}
