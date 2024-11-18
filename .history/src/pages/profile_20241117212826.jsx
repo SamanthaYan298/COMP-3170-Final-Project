@@ -95,10 +95,10 @@ const Profile = () => {
 
           {/* My Friends Section */}
           <Box flex="1" ml={50} textAlign="right">
-            <Heading as="h2" size="lg" mb={18} >
+            <Heading as="h2" size="lg" mb={18}  >
               My Friends
             </Heading>
-            <Button backgroundColor="rgba(221, 184, 255, 0.8)" onClick={toggleFriendsList} mb={4}>
+            <Button backgroundColor="rgba(221, 184, 255, 0.8)" onClick={toggleFriendsList} mb={4} display="block">
               {showFriends ? 'Hide Friends List' : 'View Friends List'}
             </Button>
             {showFriends && (
