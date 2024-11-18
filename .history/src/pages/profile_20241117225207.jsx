@@ -63,7 +63,7 @@ const Profile = () => {
           </Box>
         </Box>
         <Textarea
-          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection. Add me as a friend!"
+          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection."
           fontSize="13px"
           fontWeight="300"
           resize="none"
@@ -91,8 +91,7 @@ const Profile = () => {
                     backgroundColor="rgba(221, 184, 255, 0.8)"
                     onClick={() => handleAddFriend(request)}
                     ml={25} // Adjust the spacing between the text and button
-                    fontSize="18px"
-                 >
+                  >
                     Accept
                   </Button>
                 </Box>

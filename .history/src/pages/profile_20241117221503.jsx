@@ -63,15 +63,16 @@ const Profile = () => {
           </Box>
         </Box>
         <Textarea
-          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection. Add me as a friend!"
-          fontSize="13px"
+          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection."
+          fontSize="16px"
           fontWeight="300"
           resize="none"
           width="100%"
           textAlign="left"
-          borderRadius={10}
+          borderRadius={50}
           bg="white"
-          p={6}
+          p={4}
+          borderRadius="md"
         />
         <Divider my={1} />
 
@@ -91,8 +92,7 @@ const Profile = () => {
                     backgroundColor="rgba(221, 184, 255, 0.8)"
                     onClick={() => handleAddFriend(request)}
                     ml={25} // Adjust the spacing between the text and button
-                    fontSize="18px"
-                 >
+                  >
                     Accept
                   </Button>
                 </Box>
@@ -107,13 +107,13 @@ const Profile = () => {
             <Heading as="h2" size="lg" mb={18} >
               My Friends
             </Heading>
-            <Button backgroundColor="rgba(221, 184, 255, 0.8)" fontSize="18px" onClick={toggleFriendsList} mb={4}>
+            <Button backgroundColor="rgba(221, 184, 255, 0.8)" onClick={toggleFriendsList} mb={4}>
               {showFriends ? 'Hide Friends List' : 'View Friends List'}
             </Button>
             {showFriends && (
               <Box>
                 {friends.map((friend) => (
-                  <Text key={friend} mb={2} textAlign="right" fontSize="18px">
+                  <Text key={friend} mb={2} textAlign="right">
                     {friend}
                   </Text>
                 ))}
