@@ -75,18 +75,19 @@ const Profile = () => {
             </Heading>
             {requests.length ? (
               requests.map((request) => (
-                <Box key={request} mb={4} display="flex" alignItems="center">
-  <Text fontSize="18px" fontWeight="600" textAlign="left">
-    {request}
-  </Text>
-  <Button
-    backgroundColor="rgba(221, 184, 255, 0.8)"
-    onClick={() => handleAddFriend(request)}
-    ml={25} // Adjust the spacing between the text and button
-  >
-    Accept
-  </Button>
-</Box>
+                <Box key={request} mb={4} display="flex" alignItems="left">
+                  <Text fontSize="18px" fontWeight="600" mb={2}  textAlign="left" >
+                    {request}
+                  </Text>
+                  <Button
+                    backgroundColor="rgba(221, 184, 255, 0.8)"
+                    size="md"
+                    onClick={() => handleAddFriend(request)}
+                    ml={25}
+                  >
+                    Accept
+                  </Button>
+                </Box>
               ))
             ) : (
               <Text textAlign="left">No friend requests</Text>
@@ -94,11 +95,11 @@ const Profile = () => {
           </Box>
 
           {/* My Friends Section */}
-          <Box flex="1" ml={50} textAlign="right">
-            <Heading as="h2" size="lg" mb={18} >
+          <Box flex="1" ml={20}>
+            <Heading as="h2" size="lg" mb={10} textAlign="left">
               My Friends
             </Heading>
-            <Button backgroundColor="rgba(221, 184, 255, 0.8)" onClick={toggleFriendsList} mb={4}>
+            <Button backgroundColor="rgba(221, 184, 255, 0.8)" onClick={toggleFriendsList} mb={4} textAlign="left" display="block">
               {showFriends ? 'Hide Friends List' : 'View Friends List'}
             </Button>
             {showFriends && (
@@ -113,13 +114,13 @@ const Profile = () => {
           </Box>
         </Box>
 
-        <Divider my={6} />
+        <Divider my={10} />
 
-        <Heading as="h2" size="lg" mt={20} mb={15} textAlign="left">
+        <Heading as="h2" size="lg" mt={10} mb={15} textAlign="left">
           Visiting History
         </Heading>
         <MovieCarousel movies={visitedMovies} />
-        <Divider my={30} />
+        <Divider my={6} />
 
         <Box
           display="flex"
@@ -128,8 +129,7 @@ const Profile = () => {
           borderRadius={30}
           width="100%"
           padding={3}
-          marginTop={10}
-          marginBottom={45}
+          marginTop={60}
         >
           <Heading as="h2" size="lg" textAlign="center" mt={10} mb={4}>
             Help & Support
