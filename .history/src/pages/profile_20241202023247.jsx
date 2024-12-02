@@ -102,22 +102,22 @@ const Profile = () => {
           </Box>
         </Box>
         {isEditing ? (
-          <Textarea
-            value={tempProfile.description}
-            onChange={(e) => handleInputChange('description', e.target.value)}
-            fontSize="16px"
-            fontWeight="300"
-            resize="none"
-            width="100%"
-            textAlign="left"
-            borderRadius={10}
-            bg="white"
-            color="black"
-            p={6}
-          />
-        ) : (
-          <Text fontSize="18px" fontWeight="400">{profile.description}</Text>
-        )}
+  <Textarea
+    value={tempProfile.description}
+    onChange={(e) => handleInputChange('description', e.target.value)}
+    fontSize="16px"
+    fontWeight="300"
+    resize="none"
+    width="100%"
+    textAlign="left"
+    borderRadius={10}
+    bg="white"  // Subtle background for visibility
+    color="black"  // Text color for better contrast
+    p={6}
+  />
+) : (
+  <Text>{profile.description}</Text>
+)}
         <Divider my={1} />
         {isEditing ? (
           <Box display="flex" justifyContent="space-between" mt={4}>
@@ -127,6 +127,8 @@ const Profile = () => {
         ) : (
           <Button colorScheme="blue" onClick={() => setIsEditing(true)}>Edit Profile</Button>
         )}
+
+        {/* The rest of the profile remains the same */}
         <Divider my={6} />
 
         <Box display="flex" justifyContent="space-between" alignItems="left" gap={4}>

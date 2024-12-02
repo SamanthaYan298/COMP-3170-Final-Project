@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Heading, Button, Divider, Text, Textarea, Input } from '@chakra-ui/react';
+import { Box, Heading, Button, Divider, Text, Textarea } from '@chakra-ui/react';
 import MovieCarousel from '../components/MovieCarousel';
 import '../App.css';
 
@@ -16,14 +16,6 @@ const Profile = () => {
   const [requests, setRequests] = useState(['@studioGhibliFan']);
   const [showFriends, setShowFriends] = useState(false);
 
-  const [isEditing, setIsEditing] = useState(false);
-  const [profile, setProfile] = useState({
-    name: 'Digi Girl🍿',
-    username: '@movieLover123',
-    description: 'Animated movie enthusiast, always on the lookout for the next favorite to add to my collection. Add me as a friend!',
-  });
-  const [tempProfile, setTempProfile] = useState({ ...profile });
-
   const handleAddFriend = (newFriend) => {
     setFriends((prevFriends) => [...prevFriends, newFriend]);
     setRequests((prevRequests) =>
@@ -33,20 +25,6 @@ const Profile = () => {
 
   const toggleFriendsList = () => {
     setShowFriends((prev) => !prev);
-  };
-
-  const handleInputChange = (field, value) => {
-    setTempProfile({ ...tempProfile, [field]: value });
-  };
-
-  const handleSave = () => {
-    setProfile(tempProfile);
-    setIsEditing(false);
-  };
-
-  const handleCancel = () => {
-    setTempProfile(profile);
-    setIsEditing(false);
   };
 
   return (
@@ -63,6 +41,7 @@ const Profile = () => {
           <path d="M2 14C2 20.6274 7.37258 26 14 26C17.3194 26 20.3242 24.6522 22.4966 22.474C24.6616 20.3034 26 17.308 26 14C26 7.37258 20.6274 2 14 2C7.37258 2 2 7.37258 2 14Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
+      <Box maxW="600px" mx="auto" p={5}></Box>
       <Box maxW="600px" mx="auto" p={5}>
         <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center">
           <Box
@@ -72,64 +51,32 @@ const Profile = () => {
             bgImage="url('/images/profile-pic.jpeg')"
             bgSize="cover"
             marginBottom="1rem"
+
           />
           <Box>
-            {isEditing ? (
-              <>
-                <Input
-                  value={tempProfile.name}
-                  onChange={(e) => handleInputChange('name', e.target.value)}
-                  placeholder="Name"
-                  mt={2}
-                />
-                <Input
-                  value={tempProfile.username}
-                  onChange={(e) => handleInputChange('username', e.target.value)}
-                  placeholder="Username"
-                  mt={2}
-                />
-              </>
-            ) : (
-              <>
-                <Heading as="h2" fontSize="26px" mt=".5rem" mb={0.2}>
-                  {profile.name}
-                </Heading>
-                <Text as="h3" fontSize="20px" mt={0}>
-                  {profile.username}
-                </Text>
-              </>
-            )}
+            <Heading as="h2" fontSize="26px" mt=".5rem" mb={0.2}>
+              Digi Girl🍿
+            </Heading>
+            <Text as="h3" fontSize="20px" mt={0}>
+              @movieLover123
+            </Text>
           </Box>
         </Box>
-        {isEditing ? (
-          <Textarea
-            value={tempProfile.description}
-            onChange={(e) => handleInputChange('description', e.target.value)}
-            fontSize="16px"
-            fontWeight="300"
-            resize="none"
-            width="100%"
-            textAlign="left"
-            borderRadius={10}
-            bg="white"
-            color="black"
-            p={6}
-          />
-        ) : (
-          <Text fontSize="18px" fontWeight="400">{profile.description}</Text>
-        )}
+        <Textarea
+          placeholder="Animated movie enthusiast, always on the lookout for the next favorite to add to my collection. Add me as a friend!"
+          fontSize="13px"
+          fontWeight="300"
+          resize="none"
+          width="100%"
+          textAlign="left"
+          borderRadius={10}
+          bg="white"
+          p={6}
+        />
         <Divider my={1} />
-        {isEditing ? (
-          <Box display="flex" justifyContent="space-between" mt={4}>
-            <Button colorScheme="green" onClick={handleSave}>Save</Button>
-            <Button colorScheme="red" onClick={handleCancel}>Cancel</Button>
-          </Box>
-        ) : (
-          <Button colorScheme="blue" onClick={() => setIsEditing(true)}>Edit Profile</Button>
-        )}
-        <Divider my={6} />
 
         <Box display="flex" justifyContent="space-between" alignItems="left" gap={4}>
+          {/* Friend Requests Section */}
           <Box flex="1">
             <Heading as="h2" size="lg" mb={10} textAlign="left">
               Friend Requests
@@ -143,9 +90,9 @@ const Profile = () => {
                   <Button
                     backgroundColor="rgba(221, 184, 255, 0.8)"
                     onClick={() => handleAddFriend(request)}
-                    ml={25}
+                    ml={25} // Adjust the spacing between the text and button
                     fontSize="18px"
-                  >
+                 >
                     Accept
                   </Button>
                 </Box>
@@ -155,8 +102,9 @@ const Profile = () => {
             )}
           </Box>
 
+          {/* My Friends Section */}
           <Box flex="1" ml={50} textAlign="right">
-            <Heading as="h2" size="lg" mb={18}>
+            <Heading as="h2" size="lg" mb={18} >
               My Friends
             </Heading>
             <Button backgroundColor="rgba(221, 184, 255, 0.8)" fontSize="18px" onClick={toggleFriendsList} mb={4}>
@@ -180,8 +128,8 @@ const Profile = () => {
           Visiting History
         </Heading>
         <MovieCarousel movies={visitedMovies} />
-
         <Divider my={30} />
+
         <Box
           display="flex"
           flexDirection="column"
