@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 import "../App.css";
 import { useState } from 'react';
 import { Box, Heading, Image, Text, SimpleGrid, Card, CardBody, Stack, Button, Flex } from "@chakra-ui/react";
+import DropdownFilter from '../components/dropdownFilter';
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
-import { DropdownFilter } from './DropDownFilter';
-
 
 const MovieList = () => {
 
