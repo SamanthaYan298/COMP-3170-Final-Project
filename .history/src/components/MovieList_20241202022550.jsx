@@ -3,7 +3,8 @@ import "../App.css";
 import { useState } from 'react';
 import { Box, Heading, Image, Text, SimpleGrid, Card, CardBody, Stack, Button, Flex } from "@chakra-ui/react";
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
-import DropdownFilter from "./DropdownFilter"
+import DropdownFilter from './DropdownFilter';
+
 
 const MovieList = () => {
 
