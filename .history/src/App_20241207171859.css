@@ -77,10 +77,6 @@
   padding-bottom: 2em;
 }
 
-.images {
-  position: relative;
-}
-
 .pin-input-container {
   display: flex;
   justify-content: space-between;
@@ -404,6 +400,30 @@
   justify-content: space-between;
 }
 
+/* 悬浮窗容器 */
+.video-container {
+  position: fixed; /* 固定在视口 */
+  bottom: 20px; /* 距离视口底部 */
+  right: 20px; /* 距离视口右侧 */
+  width: 300px; /* 设置视频宽度 */
+  height: auto; /* 保持宽高比 */
+  z-index: 1000; /* 确保显示在最上层 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  border-radius: 10px; /* 圆角边框 */
+  overflow: hidden; /* 避免内容溢出 */
+  background-color: #000; /* 背景色 */
+  display: flex; /* 居中对齐 */
+  justify-content: center;
+  align-items: center;
+}
+
+/* 视频样式 */
+.video-container video {
+  width: 100%; /* 视频宽度适应容器 */
+
+
+
+
 /* Favourites Page */
 
 .cardsWRB {
@@ -507,7 +527,9 @@
   .asc-button {
     margin-left: 510px;
   }
- 
+
+  /* Popup */
+  
 
   /* Movie Info Page */
 
@@ -727,66 +749,6 @@
     top: 65em;
     left: 4.5em;
   }
-
-  /* Popup Card */
-
-  .popup-card {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 200vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-.popup-card-content {
-  background-color: #553c9a;
-  padding: 20px;
-  border-radius: 8px;
-  width: 400px;
-  text-align: center;
-}
-
-.characters-info {
-  text-align: left;
-}
-
-.characters-info > p {
-  padding: 0;
-  margin: 8px 0;
-}
-
-.popup-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0;
-  border-radius: 10px;
-}
-
-.popup-card button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: rgba(221, 184, 255, 0.8);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.popup-card button:hover {
-  background-color: #EBB99E;
-}
-
-.popup-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 }
 
 

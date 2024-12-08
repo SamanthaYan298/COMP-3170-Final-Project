@@ -3,7 +3,7 @@ import "../App.css";
 import { useState } from 'react';
 import { Box, Heading, Image, Text, SimpleGrid, Card, CardBody, Stack, Button, Flex } from "@chakra-ui/react";
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
-import DropdownFilter from "./DropdownFilter";
+import DropdownFilter from "./DropdownFilter"
 
 const MovieList = () => {
 
@@ -179,8 +179,8 @@ const MovieList = () => {
                 borderRadius="1em"
                 width="180px"
                 height="260px"
-                className='images'
               />
+              <div className="heart-overlay"></div>
               <Stack mt="6" spacing="3">
                 <Heading size="md" className="movie-title">
                   <Link

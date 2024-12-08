@@ -7,6 +7,7 @@ export default function MovieInfo() {
 
     const [isCardVisible, setIsCardVisible] = useState(false);
     const [selectedCharacter, setSelectedCharacter] = useState(null);
+    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
     const openCard = (character) => {
         setSelectedCharacter(character);
@@ -18,12 +19,11 @@ export default function MovieInfo() {
         setSelectedCharacter(null);
     };
 
-    const linkClick = (event, url) => {
-        event.preventDefault()
-
-        const clicked = window.confirm("Are you sure you want to leave this page?");
-        if (clicked) {
-            window.open(url, '_blank');
+    const video = () => {
+        setIsVideoPlaying(true);
+        const videoElement = document.getElementById("movie-video");
+        if (videoElement) {
+            videoElement.play();
         }
     };
 
@@ -51,9 +51,12 @@ export default function MovieInfo() {
                         <h3 className="movie-title-2">Mononoke</h3>
                         <p className="category">Action | Fantasy Amine | 1997 ·
                         2h 13m</p>
-                        <a href="https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon" 
-                       onClick={(e) => linkClick(e, "https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon")} 
-                       target="_blank" rel="noopener noreferrer">
+                        <a 
+                            href="https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            onClick={video} 
+                        >
                             <svg className="play-btn" width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_d_78_323)">
                                 <circle cx="31.5" cy="31.5" r="31.5" fill="black" />
@@ -73,6 +76,14 @@ export default function MovieInfo() {
                                 </defs>
                             </svg>
                         </a>
+
+                        {isVideoPlaying && (
+                            <div className="video-container">
+                                <video id="movie-video" controls width="100%">
+                                    <source src="https://www.youtube.com/watch?v=4OiMOHRDs14" type="video/mp4" />
+                                </video>
+                            </div>
+                        )}
                     </div>
                     <div className="rating-container">
                         <p className="rating-title">IMDb Rating</p>

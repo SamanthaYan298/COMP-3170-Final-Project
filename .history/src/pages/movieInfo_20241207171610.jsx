@@ -18,12 +18,20 @@ export default function MovieInfo() {
         setSelectedCharacter(null);
     };
 
-    const linkClick = (event, url) => {
-        event.preventDefault()
+    // const linkClick = (event, url) => {
+    //     event.preventDefault()
 
-        const clicked = window.confirm("Are you sure you want to leave this page?");
-        if (clicked) {
-            window.open(url, '_blank');
+    //     const clicked = window.confirm("Are you sure you want to leave this page?");
+    //     if (clicked) {
+    //         window.open(url, '_blank');
+    //     }
+    // };
+
+    const video = () => {
+        setIsVideoPlaying(true);
+        const videoElement = document.getElementById("movie-video");
+        if (videoElement) {
+            videoElement.play();
         }
     };
 
@@ -51,10 +59,11 @@ export default function MovieInfo() {
                         <h3 className="movie-title-2">Mononoke</h3>
                         <p className="category">Action | Fantasy Amine | 1997 ·
                         2h 13m</p>
-                        <a href="https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon" 
-                       onClick={(e) => linkClick(e, "https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon")} 
-                       target="_blank" rel="noopener noreferrer">
-                            <svg className="play-btn" width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* <a href="https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon" 
+                    //    onClick={(e) => linkClick(e, "https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon")}  */}
+                       {/* target="_blank" rel="noopener noreferrer"> */}
+                        <button onClick={playVideo} className="play-btn">
+                        <svg className="play-btn" width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_d_78_323)">
                                 <circle cx="31.5" cy="31.5" r="31.5" fill="black" />
                                 <path d="M25.6049 18.1501C24.8963 17.7302 24 18.241 24 19.0646V43.6806C24 44.5043 24.8963 45.0151 25.6049 44.5952L46.3748 32.2872C47.0694 31.8754 47.0694 30.8698 46.3748 30.4581L25.6049 18.1501Z" fill="#D43128" />
@@ -72,7 +81,9 @@ export default function MovieInfo() {
                                 </filter>
                                 </defs>
                             </svg>
-                        </a>
+                        </button>
+                            
+                        {/* </a> */}
                     </div>
                     <div className="rating-container">
                         <p className="rating-title">IMDb Rating</p>

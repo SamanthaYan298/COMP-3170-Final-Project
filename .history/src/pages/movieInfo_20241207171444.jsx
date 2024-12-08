@@ -18,14 +18,16 @@ export default function MovieInfo() {
         setSelectedCharacter(null);
     };
 
-    const linkClick = (event, url) => {
-        event.preventDefault()
+    // const linkClick = (event, url) => {
+    //     event.preventDefault()
 
-        const clicked = window.confirm("Are you sure you want to leave this page?");
-        if (clicked) {
-            window.open(url, '_blank');
-        }
-    };
+    //     const clicked = window.confirm("Are you sure you want to leave this page?");
+    //     if (clicked) {
+    //         window.open(url, '_blank');
+    //     }
+    // };
+
+    
 
     return (
             <div className="movie-info-container">
@@ -52,7 +54,7 @@ export default function MovieInfo() {
                         <p className="category">Action | Fantasy Amine | 1997 ·
                         2h 13m</p>
                         <a href="https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon" 
-                       onClick={(e) => linkClick(e, "https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon")} 
+                    //    onClick={(e) => linkClick(e, "https://www.imdb.com/title/tt0119698/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_%2520princess%2520momon")} 
                        target="_blank" rel="noopener noreferrer">
                             <svg className="play-btn" width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_d_78_323)">
