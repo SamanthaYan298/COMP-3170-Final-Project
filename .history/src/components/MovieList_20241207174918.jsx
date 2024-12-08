@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Box, Heading, Image, Text, SimpleGrid, Card, CardBody, Stack, Button, Flex } from "@chakra-ui/react";
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 import DropdownFilter from "./DropdownFilter";
+import { FaHeart } from 'react-icons/fa';
 
 const MovieList = () => {
 
@@ -181,6 +182,9 @@ const MovieList = () => {
                 height="260px"
                 className='images'
               />
+              <Box className='heart-overlay' p={2} borderRadius="full">
+                <FaHeart size={30} color="white" />
+              </Box>
               <Stack mt="6" spacing="3">
                 <Heading size="md" className="movie-title">
                   <Link

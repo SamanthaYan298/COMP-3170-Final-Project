@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Box, Heading, Image, Text, SimpleGrid, Card, CardBody, Stack, Button, Flex } from "@chakra-ui/react";
 import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 import DropdownFilter from "./DropdownFilter";
+import { FaHeart } from 'react-icons/fa';
 
 const MovieList = () => {
 

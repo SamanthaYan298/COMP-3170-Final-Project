@@ -72,7 +72,8 @@ export default function MovieInfo() {
                                 </filter>
                                 </defs>
                             </svg>
-                        </a>
+                            </a>
+
                     </div>
                     <div className="rating-container">
                         <p className="rating-title">IMDb Rating</p>

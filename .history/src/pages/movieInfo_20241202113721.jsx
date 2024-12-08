@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import '../App.css';
-import { useState } from "react";
-import PopupCard from "../components/PopupCard";
 
 export default function MovieInfo() {
 
@@ -72,7 +70,8 @@ export default function MovieInfo() {
                                 </filter>
                                 </defs>
                             </svg>
-                        </a>
+                            </a>
+
                     </div>
                     <div className="rating-container">
                         <p className="rating-title">IMDb Rating</p>
@@ -100,10 +99,10 @@ export default function MovieInfo() {
                         src="https://preview.redd.it/kdbg0kt07gk91.png?width=922&format=png&auto=webp&s=84dfa4847985f1e9cade06fc751861f2957a6673" 
                         alt="Forest spirit image"
                         className="character-3"
-                        onClick={() => openCard('ForestSpirit')}
+                        onClick={() => openCard('Forest Spirit')}
                     />
                 </div>
-                {isCardVisible && <PopupCard character={selectedCharacter} onClose={closeCard} />}
+
             </div>
     )
 }

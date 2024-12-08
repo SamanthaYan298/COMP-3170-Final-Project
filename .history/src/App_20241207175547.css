@@ -737,18 +737,17 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    height: 200vh;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
   }
-
+  
 .popup-card-content {
   background-color: #553c9a;
   padding: 20px;
   border-radius: 8px;
-  width: 400px;
+  width: 200px;
   text-align: center;
 }
 
