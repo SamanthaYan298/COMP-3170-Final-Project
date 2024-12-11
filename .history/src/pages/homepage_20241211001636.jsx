@@ -38,7 +38,10 @@ const Homepage = () => {
   return (
     <Box>
       {/* Heading for the Homepage */}
-      <Heading as="h1" size="xl" textAlign="center" mt={5} mb={6} padding={10} >
+      <Heading as="h1" size="xl" textAlign="center" mt={5} mb={6} padding={10} border="4px solid"  // Border around the title
+        borderColor="purple.600"  // Border color
+        borderRadius="lg"  // Rounded corners
+        boxShadow="lg">
         Animotion
       </Heading>
 

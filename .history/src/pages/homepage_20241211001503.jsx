@@ -34,11 +34,32 @@ const Homepage = () => {
 
   const upcomingReleaseDate = '2024-12-20T00:00:00Z';
 
-
   return (
     <Box>
-      {/* Heading for the Homepage */}
-      <Heading as="h1" size="xl" textAlign="center" mt={5} mb={6} padding={10} >
+      {/* Fancy Heading for the Homepage */}
+      <Heading
+        as="h1"
+        size="xl"
+        textAlign="center"
+        mt={5}
+        mb={6}
+        padding={10}
+        bgGradient="linear(to-r, purple.500, pink.400)"  // Gradient background
+        color="white"  // Text color
+        border="4px solid"  // Border around the title
+        borderColor="purple.600"  // Border color
+        borderRadius="lg"  // Rounded corners
+        boxShadow="lg"  // Shadow around the title for a 3D effect
+        fontFamily="Poppins, sans-serif"  // Font style
+        letterSpacing="1.5px"  // Spacing between letters
+        textTransform="uppercase"  // Uppercase text
+        _hover={{
+          transform: 'scale(1.05)',  // Slight scaling on hover
+          bgGradient: 'linear(to-l, pink.400, purple.500)',  // Hover gradient
+          cursor: 'pointer',  // Pointer cursor on hover
+          boxShadow: '0 0 15px rgba(255, 0, 255, 0.8)',  // Hover shadow
+        }}
+      >
         Animotion
       </Heading>
 

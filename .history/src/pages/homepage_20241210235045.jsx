@@ -32,45 +32,46 @@ const Homepage = () => {
     }
   };
 
-  const upcomingReleaseDate = '2024-12-20T00:00:00Z';
+  // Example release date for countdown (this can be dynamic based on your needs)
+  const upcomingReleaseDate = '2024-12-25T00:00:00Z';
 
 
   return (
     <Box>
       {/* Heading for the Homepage */}
-      <Heading as="h1" size="xl" textAlign="center" mt={5} mb={6} padding={10} >
+      <Heading as="h1" size="lg" textAlign="center" mt={4} mb={6} padding={35}>
         Animotion
       </Heading>
 
       {/* Countdown Timer for Upcoming Release */}
       <Box mt={10} mb={6}>
+        <Heading as="h3" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
+          Countdown to Upcoming Movie Release
+        </Heading>
         <CountdownTimer releaseDate={upcomingReleaseDate} />
       </Box>
 
       {/* Movie Banner */}
       <Box mt={10} mb={6}>
         <Image
-          src='/images/mufasa-small.jpg' 
+          src='/images/mufasa-small.jpg'  // Default image for desktop
           alt="Upcoming Movie Release"
-          width="65%"
+          width="100%" // Full width for responsiveness
           height="auto"
           objectFit="cover"
           borderRadius="md"
-          className="responsive-image" 
+          className="responsive-image" // Custom class to handle media queries
         />
       </Box>
 
       {/* Movie Carousel - Trending Movies */}
-      <Box mt={10} mb={6}>
-        <Heading as="h2" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
-         Trending Movies
-        </Heading>
+      <Box>
         <MovieCarousel movies={allMovies.slice(0, 4)} />
       </Box>
 
       {/* Movie Studios Filter */}
       <Box mt={10} mb={6}>
-        <Heading as="h2" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
+        <Heading as="h3" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
           Movie Studios
         </Heading>
         <Flex justify="center" gap={6} wrap="wrap">
@@ -97,7 +98,7 @@ const Homepage = () => {
 
       {/* Filtered Movie Carousel */}
       <Box mt={10} mb={6}>
-        <Heading as="h2" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
+        <Heading as="h3" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
           Movies
         </Heading>
         <MovieCarousel movies={filteredMovies} />

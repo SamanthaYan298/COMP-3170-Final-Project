@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Heading, Button, Flex, Image } from '@chakra-ui/react';
-import MovieCarousel from '../components/MovieCarousel';
-import CountdownTimer from '../components/CountdownTimer';
+import { Box, Heading, Button, Flex } from '@chakra-ui/react';
+import MovieCarousel from '../components/MovieCarousel'; 
 
 const Homepage = () => {
   const allMovies = [
@@ -32,43 +31,17 @@ const Homepage = () => {
     }
   };
 
-  const upcomingReleaseDate = '2024-12-20T00:00:00Z';
-
-
   return (
     <Box>
-      {/* Heading for the Homepage */}
-      <Heading as="h1" size="xl" textAlign="center" mt={5} mb={6} padding={10} >
-        Animotion
-      </Heading>
-
-      {/* Countdown Timer for Upcoming Release */}
-      <Box mt={10} mb={6}>
-        <CountdownTimer releaseDate={upcomingReleaseDate} />
-      </Box>
-
-      {/* Movie Banner */}
-      <Box mt={10} mb={6}>
-        <Image
-          src='/images/mufasa-small.jpg' 
-          alt="Upcoming Movie Release"
-          width="65%"
-          height="auto"
-          objectFit="cover"
-          borderRadius="md"
-          className="responsive-image" 
-        />
-      </Box>
-
-      {/* Movie Carousel - Trending Movies */}
-      <Box mt={10} mb={6}>
-        <Heading as="h2" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
-         Trending Movies
+      {/* Trending Movies */}
+      <Box>
+        <Heading as="h2" size="lg" textAlign="center" mt={4} mb={6} padding={35}>
+          Animotion
         </Heading>
-        <MovieCarousel movies={allMovies.slice(0, 4)} />
+        <MovieCarousel movies={allMovies.slice(0, 4)} /> 
       </Box>
 
-      {/* Movie Studios Filter */}
+      {/* Movie Studios */}
       <Box mt={10} mb={6}>
         <Heading as="h2" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
           Movie Studios
@@ -95,12 +68,12 @@ const Homepage = () => {
         </Flex>
       </Box>
 
-      {/* Filtered Movie Carousel */}
+      {/* Filtered Movies */}
       <Box mt={10} mb={6}>
         <Heading as="h2" size="lg" textAlign="center" mb={4} padding={35} color="#d9d1ff">
           Movies
         </Heading>
-        <MovieCarousel movies={filteredMovies} />
+        <MovieCarousel movies={filteredMovies} /> 
       </Box>
     </Box>
   );

@@ -482,7 +482,7 @@
 
 
 .responsive-image {
-  width: 50%;
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -510,11 +510,6 @@
     color: white;
     background: linear-gradient(180deg, rgba(99, 87, 170, 90%) 0%, rgba(39, 32, 82, 90%) 100%);
   }
-
-  /* homepage */
-.responsive-image {
-  content: url('/images/mufasa-big.jpeg'); 
-}
 
   /* Movie Page */
 
@@ -802,7 +797,10 @@
   justify-content: space-between;
 }
 
-
+/* homepage */
+.responsive-image {
+  content: url('/images/mufasa-big.jpeg'); 
+}
 }
 
 

@@ -43,7 +43,7 @@ const Homepage = () => {
       </Heading>
 
       {/* Countdown Timer for Upcoming Release */}
-      <Box mt={10} mb={6}>
+      <Box mt={1} mb={6}>
         <CountdownTimer releaseDate={upcomingReleaseDate} />
       </Box>
 
