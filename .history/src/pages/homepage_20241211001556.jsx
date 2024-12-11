@@ -32,13 +32,13 @@ const Homepage = () => {
     }
   };
 
-  const upcomingReleaseDate = '2024-12-20T00:00:00Z';
+  const upcomingReleaseDate = '2024-12-2T00:00:00Z';
 
 
   return (
     <Box>
       {/* Heading for the Homepage */}
-      <Heading as="h1" size="xl" textAlign="center" mt={5} mb={6} padding={10} >
+      <Heading as="h1" size="xl" textAlign="center" mt={5} mb={6} padding={10}>
         Animotion
       </Heading>
 
