@@ -804,6 +804,7 @@
   justify-content: space-between;
 }
 
+/* Add this to your App.css */
 .card-content {
   display: flex;
   flex-direction: column;
@@ -816,8 +817,24 @@
   text-align: center;
 }
 
+.cardsWRB .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardsWRB .card-footer {
+  margin-top: auto;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .card-footer {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .cardsWRB .card-footer {
     margin-top: auto;
     text-align: center;
   }
