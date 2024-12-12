@@ -153,7 +153,7 @@ const Profile = () => {
         <Divider my={1} />
         
         {isEditing && (
-          <Box display="flex" justifyContent="space-between" mt={0}>
+          <Box display="flex" justifyContent="space-between" mt={1}>
             <Button colorScheme="green" onClick={handleSave}>Save</Button>
             <Button colorScheme="red" onClick={handleCancel}>Cancel</Button>
           </Box>

@@ -131,7 +131,20 @@ const Profile = () => {
             )}
           </Box>
         </Box>
-      
+        
+        <Box display="flex" justifyContent="flex-end" mb={2}>
+  {!isEditing && (
+    <Button
+      backgroundColor="rgba(221, 184, 255, 0.8)"
+      fontSize="18px"
+      onClick={() => setIsEditing(true)}
+      leftIcon={<EditIcon boxSize="20px" />}
+      iconSpacing="0"
+      p="6px"
+      mr="5"
+    />
+  )}
+</Box>
         {/* Profile Description */}
         {isEditing ? (
           <Textarea
@@ -153,25 +166,11 @@ const Profile = () => {
         <Divider my={1} />
         
         {isEditing && (
-          <Box display="flex" justifyContent="space-between" mt={0}>
+          <Box display="flex" justifyContent="space-between" mt={4}>
             <Button colorScheme="green" onClick={handleSave}>Save</Button>
             <Button colorScheme="red" onClick={handleCancel}>Cancel</Button>
           </Box>
         )}
-          
-          <Box display="flex" justifyContent="center" mb={2}>
-  {!isEditing && (
-    <Button
-      backgroundColor="rgba(221, 184, 255, 0.8)"
-      fontSize="18px"
-      onClick={() => setIsEditing(true)}
-      leftIcon={<EditIcon boxSize="20px" />}
-      iconSpacing="0"
-      p="6px"
-      
-    />
-  )}
-</Box>
         <Divider my={6} />
 
         {/* Friend Requests Section */}
