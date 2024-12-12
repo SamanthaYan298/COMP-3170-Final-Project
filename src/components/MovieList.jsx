@@ -6,7 +6,6 @@ import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 import DropdownFilter from "./DropdownFilter";
 
 const MovieList = () => {
-
   const [sortOrder, setSortOrder] = useState('asc');
   const [filter, setFilter] = useState('all');
 
@@ -157,9 +156,19 @@ const MovieList = () => {
     }
   });
 
+  const addToFavorites = (movie) => {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.some(fav => fav.id === movie.id)) {
+      favorites.push(movie);
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      console.log(`${movie.title} added to favorites`);
+    } else {
+      console.log(`${movie.title} is already in favorites`);
+    }
+  };
+
   return (
     <Box>
-
       <Flex align="center" mb={4} className='filter-buttons'>
         <DropdownFilter onChange={filterChange} />
         <Button onClick={() => setSortOrder('asc')} mr={4} className="asc-button">
@@ -169,11 +178,10 @@ const MovieList = () => {
           <AiOutlineDown size={20} />
         </Button>
       </Flex>
-
       <SimpleGrid templateColumns="repeat(auto-fill, minmax(175px, 2fr))" spacing={10}>
         {sortedMovies.map((movie) => (
           <Card key={movie.id} className="cards">
-            <CardBody>
+            <CardBody className="card-content">
               <Image
                 src={movie.image_url}
                 borderRadius="1em"
@@ -200,12 +208,15 @@ const MovieList = () => {
                   ⭐ {movie.rating} / 10
                 </Text>
               </Stack>
+              <Box className="card-footer">
+                <Button onClick={() => addToFavorites(movie)}>Add to Favourites</Button>
+              </Box>
             </CardBody>
           </Card>
         ))}
       </SimpleGrid>
     </Box>
   );
-}
+};
 
 export default MovieList;
