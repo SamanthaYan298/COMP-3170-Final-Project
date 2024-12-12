@@ -131,7 +131,19 @@ const Profile = () => {
             )}
           </Box>
         </Box>
-      
+        
+        <Box display="flex" justifyContent="center" mb={2}>
+  {!isEditing && (
+    <Button
+      backgroundColor="rgba(221, 184, 255, 0.8)"
+      fontSize="18px"
+      onClick={() => setIsEditing(true)}
+      leftIcon={<EditIcon boxSize="20px" />}
+      iconSpacing="0"
+      p="6px"
+    />
+  )}
+</Box>
         {/* Profile Description */}
         {isEditing ? (
           <Textarea
@@ -153,30 +165,16 @@ const Profile = () => {
         <Divider my={1} />
         
         {isEditing && (
-          <Box display="flex" justifyContent="space-between" mt={0}>
+          <Box display="flex" justifyContent="space-between" mt={4}>
             <Button colorScheme="green" onClick={handleSave}>Save</Button>
             <Button colorScheme="red" onClick={handleCancel}>Cancel</Button>
           </Box>
         )}
-          
-          <Box display="flex" justifyContent="center" mb={2}>
-  {!isEditing && (
-    <Button
-      backgroundColor="rgba(221, 184, 255, 0.8)"
-      fontSize="18px"
-      onClick={() => setIsEditing(true)}
-      leftIcon={<EditIcon boxSize="20px" />}
-      iconSpacing="0"
-      p="6px"
-      
-    />
-  )}
-</Box>
         <Divider my={6} />
 
         {/* Friend Requests Section */}
         <Box flex="1">
-          <Heading as="h2" size="lg" mb={0} textAlign="center">
+          <Heading as="h2" size="lg" mb={0} textAlign="left">
             Friend Requests
           </Heading>
           {requests.length ? (
@@ -185,11 +183,11 @@ const Profile = () => {
                 key={request}
                 mb={4}
                 display="flex"
-                alignItems="center"
-                justifyContent="center"
+                alignItems="flex-start"
+                justifyContent="space-between"
                 flexDirection="column"
               >
-                <Text fontSize="18px" fontWeight="600" textAlign="center">
+                <Text fontSize="18px" fontWeight="600" textAlign="left">
                   {request}
                 </Text>
                 <Box display="flex" alignItems="center">
@@ -213,12 +211,12 @@ const Profile = () => {
               </Box>
             ))
           ) : (
-            <Text textAlign="center">No friend requests</Text>
+            <Text textAlign="left">No friend requests</Text>
           )}
         </Box>
 
         {/* Friends List Section */}
-        <Box flex="1" textAlign="center">
+        <Box flex="1" textAlign="left">
           <Heading as="h2" size="lg" mb={18}>
             My Friends
           </Heading>
@@ -233,7 +231,7 @@ const Profile = () => {
           {showFriends && (
             <Box>
               {friends.map((friend) => (
-                <Text key={friend} mb={2} textAlign="center" fontSize="18px">
+                <Text key={friend} mb={2} textAlign="left" fontSize="18px">
                   {friend}
                 </Text>
               ))}
