@@ -25,14 +25,12 @@ const MovieListWithRemoveButton = () => {
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     setMovies(favorites);
-    console.log('Favorites loaded', favorites);
   }, []);
 
   const handleRemove = (id) => {
     const updatedMovies = movies.filter((movie) => movie.id !== id);
     setMovies(updatedMovies);
     localStorage.setItem('favorites', JSON.stringify(updatedMovies));
-    console.log(`Movie with ID ${id} removed from favorites`);
   };
 
   return (
@@ -74,3 +72,4 @@ const MovieListWithRemoveButton = () => {
 };
 
 export default MovieListWithRemoveButton;
+
