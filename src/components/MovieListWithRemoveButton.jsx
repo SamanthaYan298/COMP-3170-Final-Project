@@ -63,7 +63,7 @@ const MovieListWithRemoveButton = () => {
                 variant="solid"
                 onClick={() => handleRemove(movie.id)}
               >
-                Remove
+                Remove Movie
               </Button>
             </Box>
           </CardBody>
