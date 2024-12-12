@@ -172,7 +172,7 @@ const Profile = () => {
     />
   )}
 </Box>
-        <Divider my={12} />
+        <Divider my={6} />
 
         {/* Friend Requests Section */}
         <Box flex="1">
@@ -240,6 +240,7 @@ const Profile = () => {
             </Box>
           )}
         </Box>
+        <Divider my={3} />
       </Box>
     </div>
   );
